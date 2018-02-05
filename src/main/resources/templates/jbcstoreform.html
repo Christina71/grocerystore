@@ -5,20 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<form action = "#"
-      th:action=" @{/process}"
-      th:object="${jbcstore}"
-      method ="post">
-      <input type ="hidden" th:field="*{id}" />
-    Item :<input type = "text" th:field ="*{item}"/>
-    <span th:if ="${#fields.hasErrors('item')}"
-          th:errors="*{title}"><</span><br/>
-    Revenue:<input type ="text" th:field="*{revenue}"/>
-    <span th:if ="${#fields.hasErrors('revenue')}"
-          th:errors="*{revenue}"><</span><br/>
-    <br/>
-    <input type = "submit" value=""Submit" />
-
-</form>
+<a href="/cosmetics">Cosmetics </a>
+<a href="/cleaning">Cleaning</a>
+<a href="/snacks">Snacks</a>
 </body>
 </html>

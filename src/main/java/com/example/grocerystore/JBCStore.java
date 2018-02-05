@@ -14,12 +14,17 @@ public class JBCStore {
     private long id;
 
     @NotNull
-    @Size(min=2)
-    private String item;
+
+    private String deptName;
 
     @NotNull
-    @Size(min=5)
-    private double revenue;
+
+    private int deptId;
+
+    public JBCStore(){
+
+    }
+
 
     public long getId() {
         return id;
@@ -29,19 +34,19 @@ public class JBCStore {
         this.id = id;
     }
 
-    public String getItem() {
-        return item;
+    public String getDeptName() {
+        return deptName;
     }
 
-    public void setItem(String item) {
-        this.item = item;
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
     }
 
-    public String getRevenue() {
-        return revenue;
+    public int getDeptId() {
+        return deptId;
     }
 
-    public void setRevenue(String revenue) {
-        this.revenue = revenue;
+    public void setDeptId(int deptId) {
+        this.deptId = deptId;
     }
 }
