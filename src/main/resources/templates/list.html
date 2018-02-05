@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href ="/add"> Add an item</a><br/>
+<table>
+    <tr>
+        <th> Item</th>
+        <th> Revenue</th>
+        <td>Actions</td>
+    </tr>
+    <tr th:each="jbcstore:${jbcstores}">
+        <td th:text="${jbcstore.item}"></td>
+        <td th:text="${jbcstore.revenue}"></td>
+        <td>
+            <a th:href="@{/update/{id}(id=${jbcstore.id})}">Update</a>
+            <a th:href="@{/update/{id}(id=${jbcstore.id})}">Details</a>
+            <a th:href="@{/update/{id}(id=${jbcstore.id})}">Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
